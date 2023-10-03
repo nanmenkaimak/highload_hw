@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package ="/message";
+
+service Message {
+    rpc SendMessage(MessageRequest) returns (MessageReply) {}
+}
+
+message MessageRequest {
+  string message = 1;
+}
+
+message MessageReply {
+  string message = 1;
+}
